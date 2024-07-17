@@ -44,12 +44,12 @@ const baseQueryWithReAuth = async (args, api, extraOptions) => {
 
         cookies.set("accessToken", accessToken, {
           path: "/",
-          httpOnly: true,
+
           sameSite: "Strict",
         });
         cookies.set("refreshToken", refreshToken, {
           path: "/",
-          httpOnly: true,
+
           sameSite: "Strict",
         });
         api.dispatch(setCredentials({ accessToken }));
